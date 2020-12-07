@@ -1,0 +1,2206 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap%27");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+@font-face {
+  font-family: Caveat-Regular;
+  src: url(../assets/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(../assets/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: GillSans-Italic;
+  src: url(../assets/GillSans-Italic.ttf);
+}
+@font-face {
+  font-family: GillSans-Light;
+  src: url(../assets/GillSans-Light.ttf);
+}
+@font-face {
+  font-family: GillSans-Regular;
+  src: url(../assets/GillSans.ttf);
+}
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 50px;
+  width: 100%;
+  top: 0;
+}
+.header nav {
+  height: 50px;
+  width: 50%;
+}
+.header nav .links {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header nav .links a {
+  text-decoration: none;
+  color: black;
+  margin: auto;
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+.header nav #login, .header nav #logout {
+  text-align: center;
+  line-height: 52px;
+  width: 158px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+}
+
+@media only all and (max-width: 1580px) {
+  .header img {
+    width: 300px;
+    height: 90px;
+  }
+  .header .navicon {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    cursor: pointer;
+  }
+  .header .navicon .line {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 2px;
+    margin: auto;
+  }
+  .header nav {
+    height: 40%;
+    width: 150%;
+    display: none;
+  }
+  .header nav .links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .header nav .links a {
+    align-self: flex-end;
+  }
+  .header .navMobileView {
+    display: inline;
+  }
+}
+@media only all and (max-width: 700px) {
+  .header img {
+    width: 147px;
+    height: 47px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .header .navicon {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    cursor: pointer;
+  }
+  .header .navicon .line {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 2px;
+    margin: auto;
+  }
+  .header nav {
+    height: 40%;
+    width: 150%;
+    display: none;
+  }
+  .header nav .links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .header nav .links a {
+    align-self: flex-end;
+  }
+  .header .navMobileView {
+    display: inline;
+  }
+}
+footer {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+}
+footer p {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  justify-content: space-around;
+  padding-left: 1%;
+}
+footer .links {
+  width: 45%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+footer .links a, footer .links p {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+footer .images {
+  width: 160px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .images .insta {
+  width: 30px;
+  background-image: url(../assets/instagram.svg);
+  background-repeat: no-repeat;
+}
+footer .images .fb {
+  width: 30px;
+  background-image: url(../assets/facebook.svg);
+  background-repeat: no-repeat;
+}
+
+@media only all and (max-width: 1500px) {
+  footer {
+    margin: 0;
+    display: flex;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 15px;
+  }
+  footer p {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    justify-content: space-around;
+    padding-left: 1%;
+  }
+  footer .links {
+    width: 45%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  footer .links a, footer .links p {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+  }
+  footer .images {
+    width: 160px;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .images .insta {
+    width: 30px;
+    background-image: url(../assets/instagram.svg);
+    background-repeat: no-repeat;
+  }
+  footer .images .fb {
+    width: 30px;
+    background-image: url(../assets/facebook.svg);
+    background-repeat: no-repeat;
+  }
+}
+@media only all and (max-width: 700px) {
+  footer {
+    margin: 0;
+    display: flex;
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 10px;
+  }
+  footer p {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    justify-content: space-around;
+    padding-left: 1%;
+  }
+  footer .links {
+    width: 45%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+  }
+  footer .links a, footer .links p {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+  }
+  footer .images {
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .images .insta {
+    width: 20px;
+    background-image: url(../assets/instagram.svg);
+    background-repeat: no-repeat;
+  }
+  footer .images .fb {
+    width: 20px;
+    background-image: url(../assets/facebook.svg);
+    background-repeat: no-repeat;
+  }
+}
+.background {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../assets/hero.jpg);
+  background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 48%;
+  top: 30%;
+  width: 357.58px;
+  height: 357.58px;
+  background-color: #FFD972;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+}
+.circle h3 {
+  text-align: center;
+  margin-top: auto;
+  justify-content: center;
+  color: black;
+  padding: 5%;
+  font-family: "Caveat-Bold";
+  font-size: 29px;
+}
+.circle p {
+  width: 45%;
+  text-align: center;
+  margin-bottom: auto;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+}
+
+.circleChild {
+  position: relative;
+  top: 30%;
+  left: 9%;
+  width: 167.88px;
+  height: 167.88px;
+  background-color: #FCBCB8;
+  border-radius: 50%;
+  display: flex;
+  z-index: 2;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+}
+.circleChild .childText {
+  width: 55%;
+  color: black;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 10px;
+}
+
+@media only all and (max-width: 1500px) {
+  .background {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/hero.jpg);
+    background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 48%;
+    top: 30%;
+    width: 357.58px;
+    height: 357.58px;
+    background-color: #FFD972;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  }
+  .circle h3 {
+    text-align: center;
+    margin-top: auto;
+    justify-content: center;
+    color: black;
+    padding: 5%;
+    font-family: "Caveat-Bold";
+    font-size: 29px;
+  }
+  .circle p {
+    width: 45%;
+    text-align: center;
+    margin-bottom: auto;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+  }
+
+  .circleChild {
+    position: relative;
+    top: 30%;
+    left: 16%;
+    width: 167.88px;
+    height: 167.88px;
+    background-color: #FCBCB8;
+    border-radius: 50%;
+    display: flex;
+    z-index: 2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  }
+  .circleChild .childText {
+    width: 55%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 10px;
+  }
+}
+@media only all and (max-width: 700px) {
+  .background {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/hero.jpg);
+    background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 35%;
+    top: 50%;
+    width: 257.58px;
+    height: 257.58px;
+    background-color: #FFD972;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  }
+  .circle h3 {
+    text-align: center;
+    margin-top: auto;
+    justify-content: center;
+    color: black;
+    padding: 5%;
+    font-family: "Caveat-Bold";
+    font-size: 29px;
+  }
+  .circle p {
+    width: 45%;
+    text-align: center;
+    margin-bottom: auto;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+  }
+
+  .circleChild {
+    position: relative;
+    top: 25%;
+    left: 21%;
+    width: 121.88px;
+    height: 121.88px;
+    background-color: #FCBCB8;
+    border-radius: 50%;
+    display: flex;
+    z-index: 2;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  }
+  .circleChild .childText {
+    width: 55%;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 10px;
+  }
+}
+.browseBackground {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../assets/recipe-hero.jpg);
+  background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.browseBackground h3 {
+  margin-top: 10%;
+  margin-left: 15%;
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+
+.browseWrapper {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1%;
+  clear: both;
+}
+.browseWrapper .recipe {
+  width: 524px;
+  height: 263px;
+  display: flex;
+  margin-left: 10%;
+}
+.browseWrapper .recipe img {
+  width: 300px;
+  height: 263px;
+  border-radius: 25px;
+}
+.browseWrapper .recipe .info {
+  position: relative;
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  right: 0;
+  border-radius: 25px;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7%;
+}
+.browseWrapper .recipe .info h4 {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  border-bottom: 2px solid black;
+}
+.browseWrapper .recipe .info p {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 15px;
+}
+.browseWrapper .recipe .time {
+  width: 150px;
+  height: 24.46px;
+  background-image: url(../assets/time.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-right: 15px;
+  margin-top: 15px;
+  display: flex;
+}
+.browseWrapper .recipe .time p {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.browseWrapper .recipe .serve {
+  width: 150px;
+  height: 24.46px;
+  background-image: url(../assets/servings.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-right: 15px;
+  display: flex;
+}
+.browseWrapper .recipe .serve p {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+@media only all and (max-width: 1500px) {
+  .browseBackground {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../assets/recipe-hero.jpg);
+    background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .browseBackground h3 {
+    margin-top: 10%;
+    margin-left: 15%;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+
+  .browseWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    clear: both;
+  }
+  .browseWrapper .recipe {
+    width: 524px;
+    height: 263px;
+    display: flex;
+  }
+  .browseWrapper .recipe img {
+    width: 300px;
+    height: 263px;
+    border-radius: 25px;
+  }
+  .browseWrapper .recipe .info {
+    position: relative;
+    width: 224px;
+    height: 263px;
+    background-color: white;
+    right: 0;
+    border-radius: 25px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7%;
+  }
+  .browseWrapper .recipe .info h4 {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    border-bottom: 2px solid black;
+  }
+  .browseWrapper .recipe .info p {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .browseWrapper .recipe .time {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/time.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: flex;
+  }
+  .browseWrapper .recipe .time p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .browseWrapper .recipe .serve {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/servings.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+  }
+  .browseWrapper .recipe .serve p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+@media only all and (max-width: 700px) {
+  .browseBackground {
+    min-height: 150vh;
+    width: 150%;
+    background-image: url(../assets/recipe-hero.jpg);
+    background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .browseBackground h3 {
+    margin-top: 20%;
+    margin-left: 15%;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+
+  .browseWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    clear: both;
+  }
+  .browseWrapper .recipe {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    margin-left: 10%;
+    flex-direction: column;
+  }
+  .browseWrapper .recipe img {
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+  }
+  .browseWrapper .recipe .info {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    right: 0;
+    border-radius: 25px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7%;
+  }
+  .browseWrapper .recipe .info h4 {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    border-bottom: 2px solid black;
+  }
+  .browseWrapper .recipe .info p {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .browseWrapper .recipe .time {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/time.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: flex;
+  }
+  .browseWrapper .recipe .time p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .browseWrapper .recipe .serve {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/servings.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+  }
+  .browseWrapper .recipe .serve p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+.loginBackground {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffd972;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.login {
+  width: 220px;
+  height: 300px;
+  margin-top: 15%;
+  margin-left: 15%;
+  justify-content: space-around;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.login h2 {
+  margin-bottom: 50px;
+}
+.login .loginBtn {
+  text-align: center;
+  line-height: 52px;
+  width: 210px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+.login input {
+  width: 210px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: black;
+  border-width: 3px;
+  background-color: inherit;
+  margin-bottom: 30px;
+}
+.login input::placeholder {
+  font-family: "Lato", sans-serif;
+  color: black;
+  font-size: 10px;
+}
+
+.signUp {
+  width: 250px;
+  height: 450px;
+  margin-top: 10%;
+  margin-left: 30%;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.signUp h5 {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-size: 12px;
+}
+.signUp .signUpBtn {
+  text-align: center;
+  line-height: 52px;
+  width: 210px;
+  height: 52px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+.signUp input {
+  width: 210px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: black;
+  border-width: 3px;
+  background-color: inherit;
+  margin-bottom: 30px;
+}
+.signUp input::placeholder {
+  font-family: "Lato", sans-serif;
+  color: black;
+  font-size: 10px;
+}
+
+@media only all and (max-width: 1500px) {
+  .loginBackground {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffd972;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+  }
+
+  .login {
+    width: 220px;
+    height: 300px;
+    margin-top: 35%;
+    margin-left: 15%;
+    justify-content: space-around;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .login h2 {
+    margin-bottom: 50px;
+  }
+  .login .loginBtn {
+    text-align: center;
+    line-height: 52px;
+    width: 210px;
+    height: 52px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .login input {
+    width: 210px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .login input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+    font-size: 10px;
+  }
+
+  .signUp {
+    width: 250px;
+    height: 450px;
+    margin-top: 30%;
+    margin-left: 30%;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .signUp h5 {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .signUp .signUpBtn {
+    text-align: center;
+    line-height: 52px;
+    width: 210px;
+    height: 52px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .signUp input {
+    width: 210px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .signUp input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+    font-size: 10px;
+  }
+}
+@media only all and (max-width: 700px) {
+  .loginBackground {
+    height: 230vh;
+    width: 220%;
+    background-color: #ffd972;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login {
+    width: 220px;
+    height: 300px;
+    margin-top: 45%;
+    margin-left: 30%;
+    justify-content: space-around;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .login h2 {
+    margin-bottom: 50px;
+  }
+  .login .loginBtn {
+    text-align: center;
+    line-height: 52px;
+    width: 210px;
+    height: 52px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .login input {
+    width: 210px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .login input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+    font-size: 10px;
+  }
+
+  .signUp {
+    width: 250px;
+    height: 450px;
+    margin-top: 40%;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .signUp h5 {
+    font-family: "Lato", sans-serif;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .signUp .signUpBtn {
+    text-align: center;
+    line-height: 52px;
+    width: 210px;
+    height: 52px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .signUp input {
+    width: 210px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .signUp input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+    font-size: 10px;
+  }
+}
+.createBackground {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.newRecipe {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 7%;
+}
+.newRecipe h3 {
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+.newRecipe input {
+  width: 97%;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: black;
+  border-width: 3px;
+  background-color: inherit;
+  margin-bottom: 30px;
+}
+.newRecipe input::placeholder {
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+.newRecipe .info {
+  min-width: 100%;
+  position: relative;
+}
+.newRecipe .info #addImage {
+  width: 110px;
+  height: 36.2px;
+  background-color: #EFA7A7;
+  border-radius: 25px;
+  border: none;
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 17px;
+}
+.newRecipe .ingredients {
+  position: relative;
+  min-width: 100%;
+}
+.newRecipe .ingredients #addIngredient {
+  width: 38px;
+  height: 38px;
+  background-color: #EFA7A7;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  cursor: pointer;
+  color: white;
+}
+.newRecipe .instructions {
+  position: relative;
+  min-width: 100%;
+}
+.newRecipe .instructions #addInstruction {
+  width: 38px;
+  height: 38px;
+  background-color: #EFA7A7;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  cursor: pointer;
+  color: white;
+}
+.newRecipe #createRecipe {
+  width: 422px;
+  min-height: 52px;
+  background-color: #EFA7A7;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  margin: 0 auto;
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+
+@media only all and (max-width: 1500px) {
+  .createBackground {
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newRecipe {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+    margin-top: 25%;
+  }
+  .newRecipe h3 {
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+  .newRecipe input {
+    width: 97%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .newRecipe input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+  }
+  .newRecipe .info {
+    min-width: 100%;
+    position: relative;
+  }
+  .newRecipe .info #addImage {
+    width: 110px;
+    height: 36.2px;
+    background-color: #EFA7A7;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 17px;
+  }
+  .newRecipe .ingredients {
+    position: relative;
+    min-width: 100%;
+  }
+  .newRecipe .ingredients #addIngredient {
+    width: 38px;
+    height: 38px;
+    background-color: #EFA7A7;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .newRecipe .instructions {
+    position: relative;
+    min-width: 100%;
+  }
+  .newRecipe .instructions #addInstruction {
+    width: 38px;
+    height: 38px;
+    background-color: #EFA7A7;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .newRecipe #createRecipe {
+    width: 422px;
+    min-height: 52px;
+    background-color: #EFA7A7;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    margin: 0 auto;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+}
+.yourBackground {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../assets/recipe-hero.jpg);
+  background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.yourBackground h3 {
+  margin-top: 10%;
+  margin-left: 15%;
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+
+.pageWrap {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1%;
+  clear: both;
+}
+.pageWrap .wrapper {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  margin-left: 5%;
+}
+.pageWrap .wrapper .recipe {
+  width: 524px;
+  height: 263px;
+  display: flex;
+}
+.pageWrap .wrapper .recipe .image {
+  width: 300px;
+  height: 263px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+}
+.pageWrap .wrapper .recipe .image .viewBtn {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 42px;
+  width: 127px;
+  height: 42px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+.pageWrap .wrapper .recipe .info {
+  position: relative;
+  width: 224px;
+  height: 263px;
+  background-color: white;
+  right: 0;
+  border-radius: 25px;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7%;
+}
+.pageWrap .wrapper .recipe .info h4 {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  border-bottom: 2px solid black;
+}
+.pageWrap .wrapper .recipe .info p {
+  width: 50%;
+  margin: 0 auto;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 15px;
+}
+.pageWrap .wrapper .recipe .time {
+  width: 150px;
+  height: 24.46px;
+  background-image: url(../assets/time.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-right: 15px;
+  margin-top: 15px;
+  display: flex;
+}
+.pageWrap .wrapper .recipe .time p {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.pageWrap .wrapper .recipe .serve {
+  width: 150px;
+  height: 24.46px;
+  background-image: url(../assets/servings.svg);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-right: 15px;
+  display: flex;
+}
+.pageWrap .wrapper .recipe .serve p {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.pageWrap .wrapper .buttons {
+  height: 42px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.pageWrap .wrapper .buttons button {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 42px;
+  width: 127px;
+  height: 42px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+
+@media only all and (max-width: 1500px) {
+  .yourBackground {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../assets/recipe-hero.jpg);
+    background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .yourBackground h3 {
+    margin-top: 10%;
+    margin-left: 15%;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+
+  .pageWrap {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    clear: both;
+  }
+  .pageWrap .wrapper {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    margin-left: 5%;
+  }
+  .pageWrap .wrapper .recipe {
+    width: 524px;
+    height: 263px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .image {
+    width: 300px;
+    height: 263px;
+    background-color: red;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .pageWrap .wrapper .recipe .image .viewBtn {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .pageWrap .wrapper .recipe .info {
+    position: relative;
+    width: 224px;
+    height: 263px;
+    background-color: white;
+    right: 0;
+    border-radius: 25px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7%;
+  }
+  .pageWrap .wrapper .recipe .info h4 {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    border-bottom: 2px solid black;
+  }
+  .pageWrap .wrapper .recipe .info p {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .pageWrap .wrapper .recipe .time {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/time.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .time p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .pageWrap .wrapper .recipe .serve {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/servings.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .serve p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .pageWrap .wrapper .buttons {
+    height: 42px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  .pageWrap .wrapper .buttons button {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+}
+@media only all and (max-width: 700px) {
+  .yourBackground {
+    min-height: 150vh;
+    width: 150%;
+    background-image: url(../assets/recipe-hero.jpg);
+    background-image: linear-gradient(rgba(167, 232, 189, 0.7), rgba(167, 232, 189, 0.7)), url(../assets/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+  .yourBackground h3 {
+    margin-top: 10%;
+    margin-left: 15%;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+
+  .pageWrap {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    clear: both;
+  }
+  .pageWrap .wrapper {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    margin-left: 5%;
+  }
+  .pageWrap .wrapper .recipe {
+    width: 524px;
+    height: 263px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .image {
+    width: 300px;
+    height: 263px;
+    background-color: red;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .pageWrap .wrapper .recipe .image .viewBtn {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+  .pageWrap .wrapper .recipe .info {
+    position: relative;
+    width: 224px;
+    height: 263px;
+    background-color: white;
+    right: 0;
+    border-radius: 25px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7%;
+  }
+  .pageWrap .wrapper .recipe .info h4 {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    border-bottom: 2px solid black;
+  }
+  .pageWrap .wrapper .recipe .info p {
+    width: 50%;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .pageWrap .wrapper .recipe .time {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/time.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .time p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .pageWrap .wrapper .recipe .serve {
+    width: 150px;
+    height: 24.46px;
+    background-image: url(../assets/servings.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    display: flex;
+  }
+  .pageWrap .wrapper .recipe .serve p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+  .pageWrap .wrapper .buttons {
+    height: 42px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  .pageWrap .wrapper .buttons button {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+}
+.editBackground {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.editRecipe {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 7%;
+}
+.editRecipe h3 {
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+.editRecipe input {
+  width: 1600px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-color: black;
+  border-width: 3px;
+  background-color: inherit;
+  margin-bottom: 30px;
+}
+.editRecipe input::placeholder {
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+.editRecipe .info {
+  min-width: 100%;
+  position: relative;
+}
+.editRecipe .info #addImage {
+  width: 110px;
+  height: 36.2px;
+  background-color: #EFA7A7;
+  border-radius: 25px;
+  border: none;
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 17px;
+}
+.editRecipe .ingredients {
+  position: relative;
+  min-width: 100%;
+}
+.editRecipe .ingredients #addIngredient {
+  width: 38px;
+  height: 38px;
+  background-color: #EFA7A7;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  cursor: pointer;
+  color: white;
+}
+.editRecipe .instructions {
+  position: relative;
+  min-width: 100%;
+}
+.editRecipe .instructions #addInstruction {
+  width: 38px;
+  height: 38px;
+  background-color: #EFA7A7;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  cursor: pointer;
+  color: white;
+}
+.editRecipe #editRecipe {
+  width: 422px;
+  min-height: 52px;
+  background-color: #EFA7A7;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  margin: 0 auto;
+  font-family: "Caveat-Bold";
+  font-style: italic;
+  font-size: 25px;
+}
+
+@media only all and (max-width: 1500px) {
+  .editBackground {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+  }
+
+  .editRecipe {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 7%;
+    margin-top: 25%;
+  }
+  .editRecipe h3 {
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+  .editRecipe input {
+    width: 1600px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-color: black;
+    border-width: 3px;
+    background-color: inherit;
+    margin-bottom: 30px;
+  }
+  .editRecipe input::placeholder {
+    font-family: "Lato", sans-serif;
+    color: black;
+  }
+  .editRecipe .info {
+    min-width: 100%;
+    position: relative;
+  }
+  .editRecipe .info #addImage {
+    width: 110px;
+    height: 36.2px;
+    background-color: #EFA7A7;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 17px;
+  }
+  .editRecipe .ingredients {
+    position: relative;
+    min-width: 100%;
+  }
+  .editRecipe .ingredients #addIngredient {
+    width: 38px;
+    height: 38px;
+    background-color: #EFA7A7;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .editRecipe .instructions {
+    position: relative;
+    min-width: 100%;
+  }
+  .editRecipe .instructions #addInstruction {
+    width: 38px;
+    height: 38px;
+    background-color: #EFA7A7;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .editRecipe #editRecipe {
+    width: 422px;
+    min-height: 52px;
+    background-color: #EFA7A7;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    margin: 0 auto;
+    font-family: "Caveat-Bold";
+    font-style: italic;
+    font-size: 25px;
+  }
+}
+.viewBackground {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: white;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.viewWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.viewWrapper h2 {
+  position: absolute;
+  width: 33px;
+  height: 421px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  margin-left: 40px;
+  letter-spacing: 5px;
+  margin-top: 70px;
+}
+.viewWrapper .viewRecipe {
+  width: 920px;
+  height: 421px;
+  margin: 0 auto;
+  margin-left: 80px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 230px;
+}
+.viewWrapper .viewRecipe .image {
+  width: 420px;
+  height: 420px;
+  background-color: red;
+}
+.viewWrapper .viewRecipe .info1 {
+  position: relative;
+  width: 500px;
+  height: 263px;
+  margin-left: 45px;
+}
+.viewWrapper .viewRecipe .info1 h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+}
+.viewWrapper .viewRecipe .info1 h4 {
+  margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+.viewWrapper .viewRecipe .info1 p {
+  margin: 0 auto;
+  font-family: "Caveat-Regular";
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.viewWrapper .info2 {
+  height: 581px;
+  width: 968px;
+  margin: 0 auto;
+  margin-top: 58px;
+  margin-left: 80px;
+}
+.viewWrapper .info2 h3 {
+  margin-bottom: 30px;
+}
+.viewWrapper .info2 p {
+  font-family: "Caveat-Regular";
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin-bottom: -2px;
+}
+.viewWrapper .info2 .ingredients {
+  width: 465px;
+  height: 279px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.viewWrapper .info2 .instructions {
+  width: 100%;
+  height: 242px;
+  font-family: "Lato", sans-serif;
+  font-size: 25px;
+}
+.viewWrapper .info2 #editBtn {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 42px;
+  width: 127.66px;
+  height: 42px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+  font-family: "Caveat-Regular";
+  font-size: 25px;
+}
+
+@media only all and (max-width: 1500px) {
+  .viewBackground {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+  }
+
+  .viewWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .viewWrapper h2 {
+    position: absolute;
+    width: 33px;
+    height: 421px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    margin-left: 40px;
+    letter-spacing: 5px;
+    margin-top: 70px;
+  }
+  .viewWrapper .viewRecipe {
+    width: 920px;
+    height: 421px;
+    margin: 0 auto;
+    margin-left: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 230px;
+  }
+  .viewWrapper .viewRecipe .image {
+    width: 420px;
+    height: 420px;
+    background-color: red;
+  }
+  .viewWrapper .viewRecipe .info1 {
+    position: relative;
+    width: 500px;
+    height: 263px;
+    margin-left: 45px;
+  }
+  .viewWrapper .viewRecipe .info1 h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+  }
+  .viewWrapper .viewRecipe .info1 h4 {
+    margin-bottom: 40px;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+  }
+  .viewWrapper .viewRecipe .info1 p {
+    margin: 0 auto;
+    font-family: "Caveat-Regular";
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .viewWrapper .info2 {
+    height: 581px;
+    width: 968px;
+    margin: 0 auto;
+    margin-top: 58px;
+    margin-left: 80px;
+  }
+  .viewWrapper .info2 h3 {
+    margin-bottom: 30px;
+  }
+  .viewWrapper .info2 p {
+    font-family: "Caveat-Regular";
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: -2px;
+  }
+  .viewWrapper .info2 .ingredients {
+    width: 465px;
+    height: 279px;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .viewWrapper .info2 .instructions {
+    width: 100%;
+    height: 242px;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+  }
+  .viewWrapper .info2 #editBtn {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127.66px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+}
+@media only all and (max-width: 700px) {
+  .viewBackground {
+    min-height: 100%;
+    min-width: 100%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+  }
+
+  .viewWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .viewWrapper h2 {
+    position: absolute;
+    width: 33px;
+    height: 421px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    margin-left: 40px;
+    letter-spacing: 5px;
+    margin-top: 70px;
+  }
+  .viewWrapper .viewRecipe {
+    width: 920px;
+    height: 421px;
+    margin: 0 auto;
+    margin-left: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 230px;
+  }
+  .viewWrapper .viewRecipe .image {
+    width: 420px;
+    height: 420px;
+    background-color: red;
+  }
+  .viewWrapper .viewRecipe .info1 {
+    position: relative;
+    width: 500px;
+    height: 263px;
+    margin-left: 45px;
+  }
+  .viewWrapper .viewRecipe .info1 h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+  }
+  .viewWrapper .viewRecipe .info1 h4 {
+    margin-bottom: 40px;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+  }
+  .viewWrapper .viewRecipe .info1 p {
+    margin: 0 auto;
+    font-family: "Caveat-Regular";
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .viewWrapper .info2 {
+    height: 581px;
+    width: 968px;
+    margin: 0 auto;
+    margin-top: 58px;
+    margin-left: 80px;
+  }
+  .viewWrapper .info2 h3 {
+    margin-bottom: 30px;
+  }
+  .viewWrapper .info2 p {
+    font-family: "Caveat-Regular";
+    letter-spacing: 4px;
+    font-size: 20px;
+    margin-bottom: -2px;
+  }
+  .viewWrapper .info2 .ingredients {
+    width: 465px;
+    height: 279px;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .viewWrapper .info2 .instructions {
+    width: 100%;
+    height: 242px;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+  }
+  .viewWrapper .info2 #editBtn {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 42px;
+    width: 127.66px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.16));
+    font-family: "Caveat-Regular";
+    font-size: 25px;
+  }
+}

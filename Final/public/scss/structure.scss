@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, #app  {
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 16px;
+}
+
+@font-face{
+    font-family: Caveat-Regular;
+    src: url(../assets/Caveat-Regular.ttf);
+}
+@font-face{
+    font-family: Caveat-Bold;
+    src: url(../assets/Caveat-Bold.ttf);
+}
+@font-face{
+    font-family: GillSans-Italic;
+    src: url(../assets/GillSans-Italic.ttf);
+}
+@font-face{
+    font-family: GillSans-Light;
+    src: url(../assets/GillSans-Light.ttf);
+}
+@font-face{
+    font-family: GillSans-Regular;
+    src: url(../assets/GillSans.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap%27');

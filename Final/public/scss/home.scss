@@ -1,0 +1,205 @@
+.background{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/hero.jpg);
+    background-image: linear-gradient(rgba(242, 92, 84, 0.6),rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;  
+}
+.circle {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        right: 48%;
+        top: 30%;
+        width: 357.58px;
+        height: 357.58px;
+        background-color:#FFD972;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+        h3 {
+            text-align: center;
+            margin-top: auto;
+            justify-content: center;
+            color: black;
+            padding: 5%;
+            font-family: "Caveat-Bold";
+            font-size: 29px;
+        }
+        p {
+            width: 45%;
+            text-align: center;
+            margin-bottom: auto;
+            color: black;
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+        }
+    }
+    .circleChild {
+            position: relative;
+            top: 30%;
+            left: 9%;
+            width: 167.88px;
+            height: 167.88px;
+            background-color:#FCBCB8;
+            border-radius: 50%;
+            display: flex;
+            z-index: 2;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+            .childText {
+                width: 55%;
+                color: black;
+                font-family: 'Lato', sans-serif;
+                font-style: italic;
+                font-size: 10px;
+            }
+        }
+@media only all and (max-width: 1500px){
+    .background{
+        height: 100vh;
+        width: 100%;
+        background-image: url(../assets/hero.jpg);
+        background-image: linear-gradient(rgba(242, 92, 84, 0.6),rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;  
+    }
+    .circle {
+            position: absolute;
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 48%;
+            top: 30%;
+            width: 357.58px;
+            height: 357.58px;
+            background-color:#FFD972;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+            h3 {
+                text-align: center;
+                margin-top: auto;
+                justify-content: center;
+                color: black;
+                padding: 5%;
+                font-family: "Caveat-Bold";
+                font-size: 29px;
+            }
+            p {
+                width: 45%;
+                text-align: center;
+                margin-bottom: auto;
+                color: black;
+                font-family: 'Lato', sans-serif;
+                font-size: 15px;
+            }
+        }
+        .circleChild {
+                position: relative;
+                top: 30%;
+                left: 16%;
+                width: 167.88px;
+                height: 167.88px;
+                background-color:#FCBCB8;
+                border-radius: 50%;
+                display: flex;
+                z-index: 2;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+                .childText {
+                    width: 55%;
+                    color: black;
+                    font-family: 'Lato', sans-serif;
+                    font-style: italic;
+                    font-size: 10px;
+                }
+        }
+}
+@media only all and (max-width: 700px){
+    .background{
+        height: 100vh;
+        width: 100%;
+        background-image: url(../assets/hero.jpg);
+        background-image: linear-gradient(rgba(242, 92, 84, 0.6),rgba(242, 92, 84, 0.6)), url(../assets/hero.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;  
+    }
+    .circle {
+            position: absolute;
+            margin-top: auto;
+            margin-bottom: auto;
+            right: 35%;
+            top: 50%;
+            width: 257.58px;
+            height: 257.58px;
+            background-color:#FFD972;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+            h3 {
+                text-align: center;
+                margin-top: auto;
+                justify-content: center;
+                color: black;
+                padding: 5%;
+                font-family: "Caveat-Bold";
+                font-size: 29px;
+            }
+            p {
+                width: 45%;
+                text-align: center;
+                margin-bottom: auto;
+                color: black;
+                font-family: 'Lato', sans-serif;
+                font-size: 15px;
+            }
+        }
+        .circleChild {
+                position: relative;
+                top: 25%;
+                left: 21%;
+                width: 121.88px;
+                height: 121.88px;
+                background-color:#FCBCB8;
+                border-radius: 50%;
+                display: flex;
+                z-index: 2;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                filter: drop-shadow(0px 10px 6px rgba(0,0,0,0.16));
+                .childText {
+                    width: 55%;
+                    color: black;
+                    font-family: 'Lato', sans-serif;
+                    font-style: italic;
+                    font-size: 10px;
+                }
+        }
+}
