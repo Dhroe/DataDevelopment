@@ -10,8 +10,12 @@ Bugs:
 -the footer tends to stick to the bottom of the page.
 -Some phones and tablets may experience issues.
 -firebase's link completely shifts everything around.
+-Web4's link doesn't bring images for some reason.
 
-Jungle Cook (firebase) https://n585-final.firebaseapp.com/#
+Jungle Cook-links
+(web4) https://in-info-web4.informatics.iupui.edu/~dhroe/N315/Final/public/#
+(firebase) https://n585-final.firebaseapp.com/#
+
 
 
 Homework 2: https://in-info-web4.informatics.iupui.edu/~dhroe/N315/Homework2/#
